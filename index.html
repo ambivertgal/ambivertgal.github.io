@@ -1,12 +1,175 @@
 <!DOCTYPE html>
-<html>
-<body style="background-color:rgb(199, 231, 235);">
-<img align ="right" src="profile_pic.jpg" alt="Anushka's picture" width="200" height="200">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushka Jain - Data Analyst & Engineer | Personal Portfolio</title>
+    <meta name="description" content="Anushka Jain is a data analyst and engineer pursuing an MS in Business Analytics at the University of Maryland. Experienced in data engineering, analytics, and customer data management.">
+    <meta name="keywords" content="Anushka Jain, Data Analyst, Data Engineer, Business Analytics, University of Maryland, Tredence Inc, Python, SQL, Azure">
+    <meta name="author" content="Anushka Jain">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ambivertgal.github.io">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 5px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #ecf0f1;
+            margin-bottom: 1rem;
+        }
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        .section {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .contact-info a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background-color: #3498db;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (min-width: 768px) {
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .profile-pic {
+                margin-bottom: 0;
+            }
+            .contact-info {
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="profile_pic.jpg" alt="Anushka Jain" class="profile-pic">
+        <div class="header-content">
+            <h1>Anushka Jain</h1>
+            <p>Data Analyst | Data Engineer | Terrapin Scholar</p>
+            <div class="contact-info">
+                <a href="mailto:ajain10@umd.edu">ajain10@umd.edu</a>
+                <a href="https://www.linkedin.com/in/anushka-jain-1012m/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </header>
 
-<h1 style="font-family:'Brush Script MT';">Anushka Jain </h1>
-<hr>
-<p><em>Data Analyst | Skin-care Enthusiast | Foodie</em> </p>
+    <main>
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Passionate data professional pursuing an MS in Business Analytics at the University of Maryland. Experienced in data engineering, analytics, and customer data management. Skilled in Python, SQL, and various cloud technologies.</p>
+        </section>
 
+        <section class="section">
+            <h2>Education</h2>
+            <h3><a href="https://www.rhsmith.umd.edu/" target="_blank" rel="noopener noreferrer">University of Maryland, Robert H. Smith School of Business</a></h3>
+            <p>Master of Science in Business Analytics | August 2024 - December 2025</p>
+            <ul>
+                <li>Terrapin Scholar</li>
+                <li>Relevant Coursework: Database Management Systems, Decision Analytics, Data Models and Decisions, Data Processing and Analytics in Python</li>
+            </ul>
+            <h3><a href="https://manipal.edu/mit.html" target="_blank" rel="noopener noreferrer">Manipal Institute of Technology</a></h3>
+            <p>Bachelor of Technology in Biotechnology | July 2018 - June 2022</p>
+            <ul>
+                <li>Minor Specialization: Digital Marketing</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Work Experience</h2>
+            <h3><a href="https://www.tredence.com/" target="_blank" rel="noopener noreferrer">Tredence Inc.</a> - Consultant</h3>
+            <p>January 2024 - July 2024</p>
+            <ul>
+                <li>Designed and implemented Customer Data Mart using Medallion Architecture</li>
+                <li>Built ETL pipelines to migrate data from Snowflake to Azure Databricks</li>
+                <li>Developed automated Data Quality Framework in PySpark</li>
+            </ul>
+            <h3>Analyst</h3>
+            <p>July 2022 - December 2023</p>
+            <ul>
+                <li>Analyzed Front of Store marketing campaigns for a major US pharmacy chain</li>
+                <li>Developed measurement framework and optimized KPI generation</li>
+                <li>Performed customer segmentation to enhance campaign effectiveness</li>
+                <li>Led team to optimize inventory, reducing cancellations and improving customer satisfaction</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <span class="skill">SQL</span>
+                <span class="skill">Python</span>
+                <span class="skill">PySpark</span>
+                <span class="skill">R</span>
+                <span class="skill">Azure Databricks</span>
+                <span class="skill">PowerBI</span>
+                <span class="skill">Tableau</span>
+                <span class="skill">Azure Data Factory</span>
+                <span class="skill">AWS</span>
+                <span class="skill">Data Engineering</span>
+                <span class="skill">Data Analysis</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Certifications & Awards</h2>
+            <ul>
+                <li><a href="https://www.databricks.com/learn/certification/data-engineer-associate" target="_blank" rel="noopener noreferrer">Databricks Certified Data Engineer Associate</a></li>
+                <li>"Quick off the Block" Award, Tredence Inc.</li>
+                <li>Gold Medal at <a href="https://igem.org/" target="_blank" rel="noopener noreferrer">iGEM competition</a> (International Genetically Engineered Machines)</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Anushka Jain. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
