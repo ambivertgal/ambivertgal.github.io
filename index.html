@@ -3,173 +3,519 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anushka Jain - Data Analyst & Engineer | Personal Portfolio</title>
-    <meta name="description" content="Anushka Jain is a data analyst and engineer pursuing an MS in Business Analytics at the University of Maryland. Experienced in data engineering, analytics, and customer data management.">
-    <meta name="keywords" content="Anushka Jain, Data Analyst, Data Engineer, Business Analytics, University of Maryland, Tredence Inc, Python, SQL, Azure">
+    <title>Anushka Jain - Personal Website</title>
+    <meta name="description" content="Anushka Jain - Data Analyst & Engineer | Personal Website. MS in Business Analytics student at University of Maryland, experienced in data engineering, analytics, and customer intelligence solutions. Passionate about data, technology, and community.">
+    <meta name="keywords" content="Anushka Jain, Data Analyst, Data Engineer, Business Analytics, University of Maryland, Tredence Inc, Python, SQL, Azure, Data Science, Machine Learning, Customer Analytics, Personal Website, Portfolio">
+    <meta name="author" content="Anushka Jain">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ambivertgal.github.io/">
+    <meta property="og:title" content="Anushka Jain - Data Analyst & Engineer | Personal Website">
+    <meta property="og:description" content="Data analyst and engineer pursuing MS in Business Analytics. Experienced in data engineering, analytics, and customer intelligence solutions.">
+    <meta property="og:image" content="https://ambivertgal.github.io/Pofile_Picture.jpeg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ambivertgal.github.io/">
+    <meta property="twitter:title" content="Anushka Jain - Data Analyst & Engineer | Personal Website">
+    <meta property="twitter:description" content="Data analyst and engineer pursuing MS in Business Analytics. Experienced in data engineering, analytics, and customer intelligence solutions.">
+    <meta property="twitter:image" content="https://ambivertgal.github.io/Pofile_Picture.jpeg">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#8b5cf6">
+    <meta name="msapplication-TileColor" content="#8b5cf6">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta name="author" content="Anushka Jain">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ambivertgal.github.io">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #8b5cf6;
+            --primary-dark: #7c3aed;
+            --secondary-color: #64748b;
+            --accent-color: #f59e0b;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
+            padding: 0 20px;
         }
-        header {
-            background-color: #2c3e50;
-            color: #ecf0f1;
+
+        /* Navigation */
+        .nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
             text-align: center;
-            padding: 1rem;
-            border-radius: 5px;
+            padding: 4rem 2rem;
+            color: white;
         }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff, #f1f5f9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin: 2rem auto;
+        }
+
+        .section {
+            background: var(--bg-primary);
+            border-radius: var(--radius);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Me */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #ecf0f1;
+            border: 4px solid var(--bg-secondary);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Interests */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .interest-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .interest-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .interest-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        h1, h2 {
-            margin-bottom: 10px;
+
+        .interest-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
         }
-        .section {
-            background-color: #fff;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        .interest-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
         }
-        .contact-info {
+
+        /* Current Status */
+        .status-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+
+        .status-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-link {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .contact-info a {
-            color: #ecf0f1;
+            gap: 0.75rem;
+            padding: 1rem 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--radius);
+            color: var(--text-primary);
             text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
         }
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+
+        .contact-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
-        .skill {
-            background-color: #3498db;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 3px;
-            font-size: 0.9em;
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.875rem;
         }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        @media (min-width: 768px) {
-            header {
-                display: flex;
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
                 align-items: center;
-                justify-content: space-around;
             }
-            .profile-pic {
-                margin-bottom: 0;
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-            .contact-info {
-                flex-direction: row;
+
+            .section {
+                padding: 2rem;
             }
+
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scroll behavior */
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="profile_pic.jpg" alt="Anushka Jain" class="profile-pic">
-        <div class="header-content">
-            <h1>Anushka Jain</h1>
-            <p>Data Analyst | Data Engineer | Terrapin Scholar</p>
-            <div class="contact-info">
-                <a href="mailto:ajain10@umd.edu">ajain10@umd.edu</a>
-                <a href="https://www.linkedin.com/in/anushka-jain-1012m/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
+    <nav class="nav">
+        <div class="nav-content">
+            <a href="#" class="nav-logo">Anushka Jain</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="section">
-            <h2>About Me</h2>
-            <p>Passionate data professional pursuing an MS in Business Analytics at the University of Maryland. Experienced in data engineering, analytics, and customer data management. Skilled in Python, SQL, and various cloud technologies.</p>
-        </section>
-
-        <section class="section">
-            <h2>Education</h2>
-            <h3><a href="https://www.rhsmith.umd.edu/" target="_blank" rel="noopener noreferrer">University of Maryland, Robert H. Smith School of Business</a></h3>
-            <p>Master of Science in Business Analytics | August 2024 - December 2025</p>
-            <ul>
-                <li>Terrapin Scholar</li>
-                <li>Relevant Coursework: Database Management Systems, Decision Analytics, Data Models and Decisions, Data Processing and Analytics in Python</li>
-            </ul>
-            <h3><a href="https://manipal.edu/mit.html" target="_blank" rel="noopener noreferrer">Manipal Institute of Technology</a></h3>
-            <p>Bachelor of Technology in Biotechnology | July 2018 - June 2022</p>
-            <ul>
-                <li>Minor Specialization: Digital Marketing</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Work Experience</h2>
-            <h3><a href="https://www.tredence.com/" target="_blank" rel="noopener noreferrer">Tredence Inc.</a> - Consultant</h3>
-            <p>January 2024 - July 2024</p>
-            <ul>
-                <li>Designed and implemented Customer Data Mart using Medallion Architecture</li>
-                <li>Built ETL pipelines to migrate data from Snowflake to Azure Databricks</li>
-                <li>Developed automated Data Quality Framework in PySpark</li>
-            </ul>
-            <h3>Analyst</h3>
-            <p>July 2022 - December 2023</p>
-            <ul>
-                <li>Analyzed Front of Store marketing campaigns for a major US pharmacy chain</li>
-                <li>Developed measurement framework and optimized KPI generation</li>
-                <li>Performed customer segmentation to enhance campaign effectiveness</li>
-                <li>Led team to optimize inventory, reducing cancellations and improving customer satisfaction</li>
-            </ul>
-        </section>
-
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill">SQL</span>
-                <span class="skill">Python</span>
-                <span class="skill">PySpark</span>
-                <span class="skill">R</span>
-                <span class="skill">Azure Databricks</span>
-                <span class="skill">PowerBI</span>
-                <span class="skill">Tableau</span>
-                <span class="skill">Azure Data Factory</span>
-                <span class="skill">AWS</span>
-                <span class="skill">Data Engineering</span>
-                <span class="skill">Data Analysis</span>
+    <div class="container">
+        <section class="hero">
+            <h1>Hi, I'm Anushka 👋</h1>
+            <p>Data analyst, engineer, and lifelong learner passionate about turning insights into impact</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">
+                    <i class="fas fa-user"></i>
+                    Learn More
+                </a>
+                <a href="AnushkaJain_Resume.pdf" class="btn btn-secondary" target="_blank">
+                    <i class="fas fa-file-alt"></i>
+                    View Resume
+                </a>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Certifications & Awards</h2>
-            <ul>
-                <li><a href="https://www.databricks.com/learn/certification/data-engineer-associate" target="_blank" rel="noopener noreferrer">Databricks Certified Data Engineer Associate</a></li>
-                <li>"Quick off the Block" Award, Tredence Inc.</li>
-                <li>Gold Medal at <a href="https://igem.org/" target="_blank" rel="noopener noreferrer">iGEM competition</a> (International Genetically Engineered Machines)</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Anushka Jain. All rights reserved.</p>
-    </footer>
+        <main class="main-content">
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <img src="Pofile_Picture.jpeg" alt="Anushka Jain" class="profile-pic">
+                    <div class="about-text">
+                        <p>Currently pursuing my Master's in Business Analytics at the University of Maryland, I come from a biotechnology background where I first discovered my love for data through research and process optimisation. This curiosity led me to transition into analytics, and over the past few years, I've worked as a data engineer and analyst at Tredence Inc., where I helped build scalable data pipelines and customer intelligence solutions for global retail clients.</p>
+                        
+                        <p>I'm currently expanding my skills as a Research Intern at the University of Florida and serving as a Graduate Student Ambassador at the Smith School of Business, where I mentor incoming students and represent the MSBA program.</p>
+                        
+                        <p>Outside of work, I'm passionate about reading fiction and psychology, traveling to new places, cooking and hosting for friends, discovering new music, and spending time with dogs (and cats when they allow it!). I enjoy blending my technical skills with empathy and creativity — whether it's through code, community, or conversation. At the heart of it all, I believe in staying curious, showing up with kindness, and building a life that balances ambition with joy.</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="interests" class="section">
+                <h2>What I'm Into</h2>
+                <div class="interests-grid">
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data & Tech</h3>
+                        <p>Exploring patterns in data, building robust pipelines, and staying excited about new tech trends. Currently focused on Azure Databricks, AI/ML, and modern data stack technologies.</p>
+                    </div>
+                    
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3>Adventure</h3>
+                        <p>Love exploring new places and cultures. Travel helps me gain fresh perspectives that I bring back to my work and learning. Always planning the next adventure!</p>
+                    </div>
+                    
+                    <div class="interest-card">
+                        <div class="interest-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community & Learning</h3>
+                        <p>Passionate about mentoring students, connecting with fellow data professionals, and continuous learning. Believe in the power of community and knowledge sharing.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Let's Connect</h2>
+                <p>I'm always interested in connecting with fellow data professionals, discussing new opportunities, or just chatting about the latest in tech and analytics. Feel free to reach out!</p>
+                
+                <div class="contact-grid">
+                    <a href="mailto:ajain10@umd.edu" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/anushka-jain-1012m/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="AnushkaJain_Resume.pdf" target="_blank" class="contact-link">
+                        <i class="fas fa-file-alt"></i>
+                        Resume
+                    </a>
+                    <a href="https://github.com/ambivertgal" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Anushka Jain. Built with ❤️ and a cup of chai.</p>
+        </footer>
+    </div>
 </body>
 </html>
