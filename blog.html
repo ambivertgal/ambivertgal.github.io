@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +7,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
+            color-scheme: light;
             --primary-color: #1f3c88;
             --primary-dark: #162a5c;
+            --secondary-color: #2a4a7b;
             --accent-color: #f0d9b5;
             --text-primary: #1d2a44;
             --text-secondary: #5b6a86;
-            --bg-primary: #fdf6e9;
+            --bg-primary: #ffffff;
             --bg-secondary: #f7eddc;
+            --bg-tertiary: #efe1c6;
             --border-color: #e2d2b0;
+            --body-gradient: linear-gradient(135deg, #fdf6e9 0%, #f0d9b5 100%);
+            --btn-primary-text: #ffffff;
+            --btn-secondary-bg: rgba(31, 60, 136, 0.08);
+            --btn-secondary-border: rgba(31, 60, 136, 0.25);
+            --btn-secondary-hover-bg: rgba(31, 60, 136, 0.15);
+            --btn-secondary-text: #1f3c88;
+            --footer-text: rgba(29, 42, 68, 0.7);
+            --status-text-color: #ffffff;
+            --status-subtext-color: rgba(255, 255, 255, 0.9);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
             --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            color-scheme: dark;
+            --primary-color: #f0d9b5;
+            --primary-dark: #d8c19a;
+            --secondary-color: #c6d1f5;
+            --accent-color: #1f3c88;
+            --text-primary: #f8f4ea;
+            --text-secondary: #cbd2e0;
+            --bg-primary: #111b33;
+            --bg-secondary: #162347;
+            --bg-tertiary: #1d2d55;
+            --border-color: rgba(240, 217, 181, 0.2);
+            --body-gradient: linear-gradient(135deg, #070d1d 0%, #13244f 100%);
+            --btn-primary-text: #070f26;
+            --btn-secondary-bg: rgba(240, 217, 181, 0.1);
+            --btn-secondary-border: rgba(240, 217, 181, 0.3);
+            --btn-secondary-hover-bg: rgba(240, 217, 181, 0.2);
+            --btn-secondary-text: #f0d9b5;
+            --footer-text: rgba(240, 236, 228, 0.7);
+            --status-text-color: #070f26;
+            --status-subtext-color: rgba(7, 15, 38, 0.75);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+            --shadow-md: 0 12px 30px -15px rgb(0 0 0 / 0.6), 0 8px 18px -10px rgb(0 0 0 / 0.5);
+            --shadow-lg: 0 25px 55px -30px rgb(0 0 0 / 0.7), 0 20px 30px -20px rgb(0 0 0 / 0.6);
         }
 
         * {
@@ -31,28 +73,31 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.7;
             color: var(--text-primary);
-            background: linear-gradient(135deg, #0b1531 0%, #1f3c88 100%);
+            background: var(--body-gradient);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 2rem;
+            transition: background 0.4s ease, color 0.2s ease;
         }
 
         .card {
             background: var(--bg-primary);
+            color: var(--text-primary);
             border-radius: var(--radius);
             padding: 3rem;
             max-width: 640px;
             width: 100%;
             text-align: center;
             box-shadow: var(--shadow-md);
+            transition: background 0.3s ease, color 0.2s ease, box-shadow 0.3s ease;
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
-            color: var(--primary-dark);
+            color: var(--text-primary);
         }
 
         p {
@@ -68,6 +113,48 @@
             gap: 1rem;
         }
 
+        .card-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 1.5rem;
+        }
+
+        .theme-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .theme-toggle i {
+            font-size: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .theme-toggle span {
+            font-size: 0.9rem;
+        }
+
+        .theme-toggle:hover {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .theme-toggle:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
         a {
             display: inline-flex;
             align-items: center;
@@ -75,21 +162,47 @@
             gap: 0.5rem;
             text-decoration: none;
             background: var(--primary-color);
-            color: white;
+            color: var(--btn-primary-text);
             padding: 0.85rem 2.5rem;
             border-radius: 999px;
             font-weight: 600;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease, color 0.3s ease;
         }
 
         a:hover {
+            background: var(--primary-dark);
+            color: var(--btn-primary-text);
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 2.25rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .card-actions {
+                justify-content: center;
+            }
+
+            .theme-toggle {
+                width: 100%;
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="card">
+        <div class="card-actions">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+                <i class="fas fa-moon"></i><span>Dark</span>
+            </button>
+        </div>
         <h1>Posting soon — stay tuned!</h1>
         <p>I’m writing the first set of posts now. Check back shortly or follow along with my journey on LinkedIn for updates in the meantime.</p>
         <div class="button-group">
@@ -97,6 +210,60 @@
             <a href="https://www.linkedin.com/in/anushka-jain-1012m/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
         </div>
     </div>
+
+    <script>
+        (function () {
+            const storageKey = 'site-theme';
+            const doc = document.documentElement;
+            const toggle = document.getElementById('theme-toggle');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+
+            const updateToggle = (theme) => {
+                if (!toggle) return;
+                const isDark = theme === 'dark';
+                toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+                toggle.innerHTML = isDark
+                    ? '<i class="fas fa-sun"></i><span>Light</span>'
+                    : '<i class="fas fa-moon"></i><span>Dark</span>';
+            };
+
+            const applyTheme = (theme) => {
+                doc.setAttribute('data-theme', theme);
+                updateToggle(theme);
+            };
+
+            const storedTheme = localStorage.getItem(storageKey);
+            if (storedTheme) {
+                applyTheme(storedTheme);
+            } else if (prefersDark) {
+                applyTheme(prefersDark.matches ? 'dark' : 'light');
+            } else {
+                applyTheme('light');
+            }
+
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    const current = doc.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    applyTheme(next);
+                    localStorage.setItem(storageKey, next);
+                });
+            }
+
+            if (prefersDark) {
+                const handleChange = (event) => {
+                    if (localStorage.getItem(storageKey)) return;
+                    applyTheme(event.matches ? 'dark' : 'light');
+                };
+
+                if (typeof prefersDark.addEventListener === 'function') {
+                    prefersDark.addEventListener('change', handleChange);
+                } else if (typeof prefersDark.addListener === 'function') {
+                    prefersDark.addListener(handleChange);
+                }
+            }
+        })();
+    </script>
 </body>
 </html>
 
